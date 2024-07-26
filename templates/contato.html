@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Confeitaria Sempre Doce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Confeitaria Sempre Doce</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Entre em Contato Conosco</h2>
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>Endereço</h3>
+                    <p>Rua das Delícias, 123<br>Cidade dos Bolos - SP</p>
+                </div>
+                <div class="info-item">
+                    <h3>Telefone</h3>
+                    <p>(11) 1234-5678</p>
+                </div>
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>contato@sempredosce.com.br</p>
+                </div>
+            </div>
+
+            <form action="mailto:contato@sempredosce.com.br" method="post" enctype="text/plain">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+
+            <div class="map">
+                <h3>Localização</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14621.185967114982!2d-46.6217411!3d-23.5457269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58d7d9a5c4b%3A0x50185d53d79b070!2sRua%20das%20Del%C3%ADcias%2C%20123%20-%20Cidade%20dos%20Bolos%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1620281839623!5m2!1spt-BR!2sbr"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Confeitaria Sempre Doce. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
